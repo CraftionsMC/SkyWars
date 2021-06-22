@@ -1,0 +1,5 @@
+name: Skywars
+version: ${project.version}
+main: net.craftions.skywars.Skywars
+api-version: 1.16
+authors: [ MCTzOCK ]

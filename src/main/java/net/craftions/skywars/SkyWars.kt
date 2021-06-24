@@ -5,6 +5,7 @@ import net.craftions.api.game.Game
 import net.craftions.api.game.util.GameBuilder
 import net.craftions.api.game.util.TeamBuilder
 import net.craftions.api.language.Language
+import net.craftions.skywars.events.EventGameStart
 import net.craftions.skywars.util.PathUtil
 import org.bukkit.Bukkit
 import org.bukkit.Location
@@ -89,6 +90,8 @@ class SkyWars : JavaPlugin() {
                     .build()
             )
             .build()
+        Bukkit.getPluginManager().registerEvents(EventGameStart(), this)
+        Bukkit.getPluginManager().registerEvents(EventGameStop(), this)
     }
 
     private fun setDefaultValue(path: String, value: Any) {
